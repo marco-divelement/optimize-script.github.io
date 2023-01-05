@@ -311,7 +311,7 @@ form.css-8atqhb .chakra-form__error-message {
               <span class="auto_region var_sticky"></span>
           </label>
           <span class="zip_error">Write your zip code</span>
-          <button>Compare quotes</button>
+          <button>Compare quote</button>
       </section>
       `
 
@@ -335,7 +335,7 @@ form.css-8atqhb .chakra-form__error-message {
         <span class="auto_region var_auto_loc"></span>
     </label>
     <span class="zip_error">Write your zip code</span>
-    <button>Compare quotes</button>
+    <button>Compare quote</button>
 </div>
 `
 
