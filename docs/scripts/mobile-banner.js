@@ -1,8 +1,8 @@
-let stickyBanner = setInterval(() => {
+let mobileBanner = setInterval(() => {
     if (document.querySelector("#menu-list")) {
-        clearInterval(stickyBanner)
+        clearInterval(mobileBanner)
 
-        console.log(">>>>>>>>>>>>>>>Variant C")
+        console.log("Variant 2")
 
         let eventVar = "desktop"
 
@@ -16,7 +16,8 @@ let stickyBanner = setInterval(() => {
                 console.log(actionDataLayer + " : " + labelDataLayer)
                 dataLayer.push({
                     event: "event-to-ga",
-                    eventCategory: `Exp: Sticky AutoFilled ZIP Variant C ${eventVar}`,
+                    // eventCategory: `Exp: A/B Test for Mobile Design Update - Above the Fold ${eventVar}`,
+                    eventCategory: `Exp: A/B Test for Mobile Design Update - Above the Fold mobile`,
                     eventAction: `${actionDataLayer}`,
                     eventLabel: `${labelDataLayer}`,
                 })
@@ -24,7 +25,7 @@ let stickyBanner = setInterval(() => {
                 console.log(actionDataLayer)
                 dataLayer.push({
                     event: "event-to-ga",
-                    eventCategory: `Exp: Sticky AutoFilled ZIP Variant C ${eventVar}`,
+                    eventCategory: `Exp: A/B Test for Mobile Design Update - Above the Fold mobile`,
                     eventAction: `${actionDataLayer}`,
                 })
             }
@@ -75,7 +76,7 @@ let stickyBanner = setInterval(() => {
               display: flex;
               align-items: center;
               justify-content: center;
-              background: #FFC65A;
+              background: blue;
               border-radius: 6px;
               width: 100%;
               height: 48px;
@@ -293,7 +294,7 @@ form.css-8atqhb .chakra-form__error-message {
               </clipPath>
               </defs>
           </svg>
-          <p>Compare rates and save on auto insurance today!</p>
+          <p>Compare rates and save on auto insurance today!!</p>
           <label>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_82_998)">
