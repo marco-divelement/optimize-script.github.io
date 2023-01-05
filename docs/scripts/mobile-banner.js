@@ -196,7 +196,7 @@ form.css-8atqhb .chakra-form__error-message {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffc659;
+  background: red;
   border-radius: 6px;
   width: 100%;
   height: 56px;
