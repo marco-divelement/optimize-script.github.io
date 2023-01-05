@@ -318,7 +318,7 @@ form.css-8atqhb .chakra-form__error-message {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: pink;
+  background: darkseagreen;
   border-radius: 6px;
   width: 100%;
   height: 56px;
@@ -732,7 +732,7 @@ form.css-8atqhb .chakra-form__error-message {
 
                     let observerNewHeader = new IntersectionObserver((entries) => {
                         if (!entries[0].isIntersecting) return
-                        pushDataLayer(`State resolved from IP and shown`)
+                        pushDataLayer(` `)
                         observerNewHeader.disconnect()
                     })
 
