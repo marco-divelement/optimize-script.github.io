@@ -33,6 +33,128 @@ let mobileBanner = setInterval(() => {
 
         let style = /*html */ `
       <style>
+      
+      
+      /*Banner mobile style*/
+   @media only screen and (max-width: 428px) {
+  #desktopBanner {
+    display : none;
+  }
+}
+@media only screen and (min-width: 429px) {
+  #mobileBanner {
+    display : none;
+  }
+}
+#mobileBanner {
+  background-color : rgba(0, 0, 0, 0);
+  color : rgb(0, 0, 0);
+}
+
+#mobileBanner>div:nth-of-type(4)>div>div:nth-of-type(2) {
+  background-color : rgba(0, 0, 0, 0);
+}
+
+#mobileBanner>div:nth-of-type(4)>div {
+  background-image : none;
+  background-color : rgba(0, 0, 0, 0);
+  border-color : rgb(60, 128, 255);
+  border-width : 2px;
+  border-radius : 10px;
+}
+
+#mobileBanner>div:nth-of-type(2)>div>div {
+  color : rgb(82, 110, 255);
+}
+
+#mobileBanner>div:nth-of-type(3)>div>div {
+  color : rgb(82, 110, 255);
+}
+
+#mobileBanner>div:nth-of-type(6)>div:nth-of-type(2)>div>svg {
+  display : none;
+}
+
+#mobileBanner>div:nth-of-type(5)>div>div:nth-of-type(2) {
+  background-color : rgba(0, 0, 0, 0);
+}
+
+#bannerWidget {
+  background-image : none;
+  background-color : rgb(255, 255, 255);
+  border-color : rgb(72, 99, 255);
+  border-width : 2px;
+  border-radius : 10px;
+}
+
+#mobileBanner>div:nth-of-type(4)>div>div {
+  color : rgb(82, 110, 255);
+}
+
+#mobileBanner>span:nth-of-type(2) {
+  color : rgb(82, 110, 255);
+  text-decoration-line : underline;
+  text-decoration-thickness : initial;
+  text-decoration-style : initial;
+  text-decoration-color : initial;
+}
+
+#mobileBanner>div:nth-of-type(6)>div>div:nth-of-type(2)>div>svg>path:nth-of-type(2) {
+  display : none;
+}
+
+#mobileBanner>div:nth-of-type(6)>div>div:nth-of-type(2)>div>svg {
+  display : none;
+}
+
+#mobileBanner>div:nth-of-type(2)>div>div {
+  font-weight : bold;
+}
+
+#mobileBanner>div:nth-of-type(3)>div>div {
+  font-weight : bold;
+}
+
+#mobileBanner>div:nth-of-type(4)>div>div {
+  font-weight : bold;
+}
+
+#mobileBanner>span:nth-of-type(2) {
+  font-weight : bold;
+}
+
+#mobileBanner>div:nth-of-type(2) {
+  font-size : 13px;
+}
+
+#mobileBanner>div:nth-of-type(3) {
+  font-size : 13px;
+}
+
+#mobileBanner>div:nth-of-type(4) {
+  font-size : 13px;
+}
+
+#mobileBanner>span:nth-of-type(1) {
+  font-size : 13px;
+}
+
+#mobileBanner>span:nth-of-type(2) {
+  font-size : 13px;
+}
+
+#mobileBanner>small {
+  margin : 35px 0px;
+}
+
+#mobileBanner>h1 {
+  margin : 20px 0px 4px;
+}
+
+  
+  
+      /*Banner mobile style*/
+  
           .css-15hxzhe{
             z-index: 1;
           }
@@ -196,7 +318,7 @@ form.css-8atqhb .chakra-form__error-message {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: red;
+  background: pink;
   border-radius: 6px;
   width: 100%;
   height: 56px;
@@ -283,7 +405,8 @@ form.css-8atqhb .chakra-form__error-message {
 
         let stickyBlock = /*html */ `
       <div></div>
-      <section class="sticky_banner">
+<!--      <section class="sticky_banner"> -->
+      <section id="mobileBanner"> 
           <svg class="btn_close_sticky" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_82_1006)">
               <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#555555"/>
@@ -311,7 +434,7 @@ form.css-8atqhb .chakra-form__error-message {
               <span class="auto_region var_sticky"></span>
           </label>
           <span class="zip_error">Write your zip code</span>
-          <button>Compare quote</button>
+          <button>Compare quotes</button>
       </section>
       `
 
