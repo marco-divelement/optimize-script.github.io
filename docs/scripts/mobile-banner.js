@@ -341,13 +341,13 @@ form.css-8atqhb .chakra-form__error-message {
 
         document.body.insertAdjacentHTML("afterbegin", style)
 
-        onSticky()
+        // onSticky()
 
         if (document.querySelector("form.css-8atqhb")) {
             onAutoFillLocation()
         }
 
-        fetchLocation()
+        // fetchLocation()
 
         function onSticky() {
             if (!sessionStorage.getItem("sticky_banner")) {
