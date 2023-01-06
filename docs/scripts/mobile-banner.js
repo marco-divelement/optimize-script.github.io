@@ -35,8 +35,8 @@ let mobileBanner = setInterval(() => {
       <style>
       
       
-      /*Banner mobile style*/
-   @media only screen and (max-width: 428px) {
+ /*Banner mobile style*/
+ @media only screen and (max-width: 428px) {
   #desktopBanner {
     display : none;
   }
@@ -59,7 +59,6 @@ let mobileBanner = setInterval(() => {
 }
 }
 
-      /*Banner mobile style*/
   
           .css-15hxzhe{
             z-index: 1;
@@ -224,7 +223,7 @@ form.css-8atqhb .chakra-form__error-message {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: darkseagreen;
+  background: blueviolet;
   border-radius: 6px;
   width: 100%;
   height: 56px;
