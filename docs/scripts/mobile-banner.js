@@ -115,7 +115,7 @@ let mobileBanner = setInterval(() => {
               display: flex;
               align-items: center;
               justify-content: center;
-              background: blue;
+              background: lightgrey;
               border-radius: 6px;
               width: 100%;
               height: 48px;
