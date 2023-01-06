@@ -42,117 +42,23 @@ let mobileBanner = setInterval(() => {
   }
 }
 @media only screen and (min-width: 429px) {
-  #mobileBanner {
-    display : none;
-  }
+.banner_widget button {
+  margin: 12px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: darkred;
+  border-radius: 6px;
+  width: 100%;
+  height: 56px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #1e1b4d;
 }
-#mobileBanner {
-  background-color : rgba(0, 0, 0, 0);
-  color : rgb(0, 0, 0);
-}
-
-#mobileBanner>div:nth-of-type(4)>div>div:nth-of-type(2) {
-  background-color : rgba(0, 0, 0, 0);
-}
-
-#mobileBanner>div:nth-of-type(4)>div {
-  background-image : none;
-  background-color : rgba(0, 0, 0, 0);
-  border-color : rgb(60, 128, 255);
-  border-width : 2px;
-  border-radius : 10px;
 }
 
-#mobileBanner>div:nth-of-type(2)>div>div {
-  color : rgb(82, 110, 255);
-}
-
-#mobileBanner>div:nth-of-type(3)>div>div {
-  color : rgb(82, 110, 255);
-}
-
-#mobileBanner>div:nth-of-type(6)>div:nth-of-type(2)>div>svg {
-  display : none;
-}
-
-#mobileBanner>div:nth-of-type(5)>div>div:nth-of-type(2) {
-  background-color : rgba(0, 0, 0, 0);
-}
-
-#bannerWidget {
-  background-image : none;
-  background-color : rgb(255, 255, 255);
-  border-color : rgb(72, 99, 255);
-  border-width : 2px;
-  border-radius : 10px;
-}
-
-#mobileBanner>div:nth-of-type(4)>div>div {
-  color : rgb(82, 110, 255);
-}
-
-#mobileBanner>span:nth-of-type(2) {
-  color : rgb(82, 110, 255);
-  text-decoration-line : underline;
-  text-decoration-thickness : initial;
-  text-decoration-style : initial;
-  text-decoration-color : initial;
-}
-
-#mobileBanner>div:nth-of-type(6)>div>div:nth-of-type(2)>div>svg>path:nth-of-type(2) {
-  display : none;
-}
-
-#mobileBanner>div:nth-of-type(6)>div>div:nth-of-type(2)>div>svg {
-  display : none;
-}
-
-#mobileBanner>div:nth-of-type(2)>div>div {
-  font-weight : bold;
-}
-
-#mobileBanner>div:nth-of-type(3)>div>div {
-  font-weight : bold;
-}
-
-#mobileBanner>div:nth-of-type(4)>div>div {
-  font-weight : bold;
-}
-
-#mobileBanner>span:nth-of-type(2) {
-  font-weight : bold;
-}
-
-#mobileBanner>div:nth-of-type(2) {
-  font-size : 13px;
-}
-
-#mobileBanner>div:nth-of-type(3) {
-  font-size : 13px;
-}
-
-#mobileBanner>div:nth-of-type(4) {
-  font-size : 13px;
-}
-
-#mobileBanner>span:nth-of-type(1) {
-  font-size : 13px;
-}
-
-#mobileBanner>span:nth-of-type(2) {
-  font-size : 13px;
-}
-
-#mobileBanner>small {
-  margin : 35px 0px;
-}
-
-#mobileBanner>h1 {
-  margin : 20px 0px 4px;
-}
-
-  
-  
       /*Banner mobile style*/
   
           .css-15hxzhe{
@@ -305,7 +211,7 @@ form.css-8atqhb button.chakra-button,
 form.css-8atqhb .chakra-form__error-message {
   display: none !important;
 }
-.auto_location_block p {
+.banner_widget p {
   font-family: "Brandon Grotesque", sans-serif;
   font-weight: 600;
   font-size: 16px;
@@ -313,7 +219,7 @@ form.css-8atqhb .chakra-form__error-message {
   color: #ffffff;
   margin-bottom: 4px;
 }
-.auto_location_block button {
+.banner_widget button {
   margin: 12px 0 0;
   display: flex;
   align-items: center;
@@ -328,7 +234,7 @@ form.css-8atqhb .chakra-form__error-message {
   text-transform: uppercase;
   color: #1e1b4d;
 }
-.auto_location_block label {
+.banner_widget label {
   display: flex;
   justify-content: space-between;
   background: #ffffff;
@@ -337,12 +243,12 @@ form.css-8atqhb .chakra-form__error-message {
   align-items: center;
   padding: 7px 12px;
 }
-.auto_location_block label svg {
+.banner_widget label svg {
   width: 100%;
   max-width: 16px;
   margin-right: 12px;
 }
-.auto_location_block input {
+.banner_widget input {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -358,11 +264,11 @@ form.css-8atqhb .chakra-form__error-message {
   max-width: 126px;
   width: 100%;
 }
-.auto_location_block input:focus,
-.auto_location_block input:hover {
+.banner_widget input:focus,
+.banner_widget input:hover {
   border-color: #d3d4d6;
 }
-.auto_location_block input::placeholder {
+.banner_widget input::placeholder {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -391,12 +297,12 @@ form.css-8atqhb .chakra-form__error-message {
 .zip_error.is_error {
   display: block;
 }
-.auto_location_block label.is_error {
+.banner_widget label.is_error {
   border-color: #db3732;
 }
 
 @media (max-width: 1110px) {
-  .auto_location_block label {
+  .banner_widget label {
     padding: 8px 12px;
   }
 }
@@ -437,9 +343,9 @@ form.css-8atqhb .chakra-form__error-message {
       </section>
       `
 
-        let autoLocationBlock = /*html */ `
+        let bannerBlock = /*html */ `
     <div></div>
-<div class="auto_location_block">
+<div class="banner_widget">
     <p>Your Zip Code</p>
     <label>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -658,14 +564,14 @@ form.css-8atqhb .chakra-form__error-message {
                                                     er.classList.add("is_error")
                                                 })
                                                 label.classList.add("is_error")
-                                                document.querySelector(".auto_location_block label")?.classList.add("is_error")
+                                                document.querySelector(".banner_widget label")?.classList.add("is_error")
                                                 pushDataLayer("Sticky filed error shown")
                                             } else {
                                                 error.forEach((er) => {
                                                     er.classList.remove("is_error")
                                                 })
                                                 label.classList.remove("is_error")
-                                                document.querySelector(".auto_location_block label")?.classList.remove("is_error")
+                                                document.querySelector(".banner_widget label")?.classList.remove("is_error")
                                                 if (document.querySelector(".auto_region svg")) {
                                                     document.querySelectorAll(".auto_region").forEach((e) => {
                                                         e.innerHTML = ""
@@ -721,7 +627,7 @@ form.css-8atqhb .chakra-form__error-message {
         }
 
         function onAutoFillLocation() {
-            document.querySelector("form.css-8atqhb").insertAdjacentHTML("afterbegin", autoLocationBlock)
+            document.querySelector("form.css-8atqhb").insertAdjacentHTML("afterbegin", bannerBlock)
 
             if (document.querySelector(".auto_region.var_auto_loc")) {
                 if (document.querySelector(".auto_region.var_auto_loc") !== "") {
@@ -743,8 +649,8 @@ form.css-8atqhb .chakra-form__error-message {
             onClickControlVer()
 
             function onClickControlVer() {
-                if (document.querySelector(".auto_location_block")) {
-                    let autoLocBox = document.querySelector(".auto_location_block"),
+                if (document.querySelector(".banner_widget")) {
+                    let autoLocBox = document.querySelector(".banner_widget"),
                         label = autoLocBox.querySelector("label"),
                         input = autoLocBox.querySelector("input"),
                         btnSend = autoLocBox.querySelector("button"),
@@ -832,7 +738,7 @@ form.css-8atqhb .chakra-form__error-message {
                         if (document.querySelectorAll("[name='zip']")[0]) {
                             var nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set
                             nativeInputValueSetter.call(document.querySelectorAll("[name='zip']")[0], jsonResponse.postal)
-                            var ev2 = new Event("input", { bubbles: true })
+                            var ev2 = new Event("input", {bubbles: true})
                             document.querySelectorAll("[name='zip']")[0].dispatchEvent(ev2)
 
                             if (document.querySelector(".auto_region.var_auto_loc")) {
@@ -875,7 +781,7 @@ form.css-8atqhb .chakra-form__error-message {
                 })
                 label.classList.remove("is_error")
             }
-            let ev2 = new Event("input", { bubbles: true })
+            let ev2 = new Event("input", {bubbles: true})
             document.querySelectorAll('[name="zip"]')[0].dispatchEvent(ev2)
 
             document.querySelectorAll(".auto_region").forEach((i) => {
