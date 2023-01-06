@@ -37,9 +37,21 @@ let mobileBanner = setInterval(() => {
       
  /*Banner mobile style*/
  @media only screen and (max-width: 428px) {
-  #desktopBanner {
-    display : none;
-  }
+ .banner_widget button {
+  margin: 12px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black !important;
+  border-radius: 6px;
+  width: 100%;
+  height: 56px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #1e1b4d;
+}
 }
 @media only screen and (min-width: 429px) {
 .banner_widget button {
@@ -47,7 +59,7 @@ let mobileBanner = setInterval(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: darkred;
+  background: darkred !important;
   border-radius: 6px;
   width: 100%;
   height: 56px;
