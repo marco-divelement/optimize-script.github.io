@@ -46,11 +46,11 @@ let mobileBanner = setInterval(() => {
  }
  
  .css-1uguvmx {
-    border-radius: 15px; 
+    border-radius: 12.5px; 
     background-image: unset !important;
     background-color: white !important;
     color: black !important;
-        border: 2px solid rgb(64,82,254) !important;
+        border: 3px solid rgb(64,82,254) !important;
     
 }
 
@@ -350,7 +350,6 @@ form.css-8atqhb .chakra-form__error-message {
 }
       </style>
       `
-
         let stickyBlock = /*html */ `
       <div></div>
       <section class="sticky_banner"> 
@@ -410,12 +409,25 @@ form.css-8atqhb .chakra-form__error-message {
 </div>
 `
 
+        let publishersInfo = /*html */ `
+    <div></div>
+<div class="publishers_info">
+    Hola mundo Publishers
+</div>
+`
+
+        function onShowPublishers () {
+            document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
+        }
+        onShowPublishers()
+
+
         document.body.insertAdjacentHTML("afterbegin", style)
 
         // onSticky()
 
         if (document.querySelector("form.css-8atqhb")) {
-            onAutoFillLocation()
+           // onAutoFillLocation()
         }
 
         // fetchLocation()
