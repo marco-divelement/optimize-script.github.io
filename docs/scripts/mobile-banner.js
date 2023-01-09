@@ -397,6 +397,7 @@ form.css-8atqhb .chakra-form__error-message {
         <span class="auto_region var_auto_loc"></span>
     </label>
     <span class="zip_error">Write your zip code</span>
+    <small>Free and Simple - your information is secure </small>
     <button>Compare quote</button>
 </div>
 `
