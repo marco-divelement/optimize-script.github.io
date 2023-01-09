@@ -2,7 +2,8 @@ let mobileBanner = setInterval(() => {
     if (document.querySelector("#menu-list")) {
         clearInterval(mobileBanner)
 
-        console.log("Variant 2.4")
+        console.log("Variant 2")
+        console.log("Version 2.5")
 
         let eventVar = "desktop"
 
@@ -40,8 +41,13 @@ let mobileBanner = setInterval(() => {
  @media only screen and (max-width: 429px) {
  
  .css-1uguvmx {
-    /* border-radius: 5px; */
-    /* background-image: url(https://res.cloudinary.com/moneygeek/image/upload/v1579500551/bzr65ug0nqivduutyymz.svg); */
+    border-radius: 5px; 
+    background-image: unset !important;
+    background-color: white !important;
+    color: black !important;
+}
+
+.css-mljoh {
     background-color: white !important;
     color: black !important;
 }
@@ -250,7 +256,7 @@ form.css-8atqhb .chakra-form__error-message {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: bisque;
+  /*background: bisque;*/
   border-radius: 6px;
   width: 100%;
   height: 56px;
