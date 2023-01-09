@@ -414,6 +414,13 @@ form.css-8atqhb .chakra-form__error-message {
 </div>
 `
 
+        let publishersInfo = /*html */ `
+    <div></div>
+<div class="banner_widget">
+    <p>Verified By: </p>
+</div>
+`
+
         document.body.insertAdjacentHTML("afterbegin", style)
 
         // onSticky()
@@ -423,6 +430,10 @@ form.css-8atqhb .chakra-form__error-message {
         }
 
         // fetchLocation()
+
+        if (window.innerWidth <= 469) {
+            document.querySelector(".css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
+        }
 
         function onSticky() {
             if (!sessionStorage.getItem("sticky_banner")) {
