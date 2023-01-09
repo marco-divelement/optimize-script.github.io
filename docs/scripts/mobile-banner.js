@@ -39,6 +39,11 @@ let mobileBanner = setInterval(() => {
       
  /*Banner mobile style*/
  @media only screen and (max-width: 429px) {
+ /*Section*/
+ .css-polczn{
+    background-color: white !important;
+    color: black !important;
+ }
  
  .css-1uguvmx {
     border-radius: 15px; 
@@ -53,11 +58,14 @@ let mobileBanner = setInterval(() => {
     background-color: white !important;
     color: black !important;
 }
+
+.css-ptv46z{
+display: none !important;
+}
  
  .banner_widget {
  background: white !important;
  color: black !important;
- 
  }
  
  .banner_widget button {
