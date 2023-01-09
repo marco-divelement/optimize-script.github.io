@@ -3,7 +3,7 @@ let mobileBanner = setInterval(() => {
         clearInterval(mobileBanner)
 
         console.log("Variant 2")
-        console.log("Version 2.9")
+        console.log("Version 2.6")
 
         let eventVar = "desktop"
 
@@ -46,7 +46,7 @@ let mobileBanner = setInterval(() => {
  }
  
  .css-1uguvmx {
-    border-radius: 12.5px; 
+    border-radius: 15px; 
     background-image: unset !important;
     background-color: white !important;
     color: black !important;
@@ -350,8 +350,8 @@ form.css-8atqhb .chakra-form__error-message {
 }
       </style>
       `
-        let stickyBlock = /*html */ `
 
+        let stickyBlock = /*html */ `
       <div></div>
       <section class="sticky_banner"> 
           <svg class="btn_close_sticky" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -384,8 +384,8 @@ form.css-8atqhb .chakra-form__error-message {
           <button>Compare quotes</button>
       </section>
       `
-        let bannerBlock = /*html */ `
 
+        let bannerBlock = /*html */ `
     <div></div>
 <div class="banner_widget">
 <!--    <p>Your Zip Code</p>-->
@@ -401,22 +401,21 @@ form.css-8atqhb .chakra-form__error-message {
             </clipPath>
             </defs>
         </svg>
-        <input type="number" autocomplete="off" pattern="[0-9]*" name="zipCode"  placeholder="Your zip code" class=""> 
-<!--        <span class="auto_region var_auto_loc"></span>-->
+        <input type="number" autocomplete="off" pattern="[0-9]*" name="zipCode"  placeholder="Your zip code" class="">
+        <span class="auto_region var_auto_loc"></span>
     </label>
-<!--    <span class="zip_error">Write your zip code</span> -->
+    <span class="zip_error">Write your zip code</span>
     <small>Free and Simple - your information is secure </small>
     <button>Compare quote</button>
 </div>
 `
-
 
         document.body.insertAdjacentHTML("afterbegin", style)
 
         // onSticky()
 
         if (document.querySelector("form.css-8atqhb")) {
-            // onAutoFillLocation()
+            onAutoFillLocation()
         }
 
         // fetchLocation()
@@ -539,8 +538,6 @@ form.css-8atqhb .chakra-form__error-message {
                 }
             }
         }
-
-
 
         function onAutoFillLocation() {
             document.querySelector("form.css-8atqhb").insertAdjacentHTML("afterbegin", bannerBlock)
@@ -770,7 +767,7 @@ form.css-8atqhb .chakra-form__error-message {
             if (typeof clarity === "function") {
                 clearInterval(record)
 
-                clarity("set", `mobile widget${eventVar}`, "variant_2")
+                clarity("set", `sticky_autofilled_zip_variant_c${eventVar}`, "variant_1")
             }
         }, 200)
     }
