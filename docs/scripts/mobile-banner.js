@@ -2,7 +2,7 @@ let mobileBanner = setInterval(() => {
     if (document.querySelector("#menu-list")) {
         clearInterval(mobileBanner)
 
-        console.log("Variant 2")
+        console.log("Variant 2.1")
 
         let eventVar = "desktop"
 
@@ -37,7 +37,7 @@ let mobileBanner = setInterval(() => {
       
       
  /*Banner mobile style*/
- @media only screen and (max-width: 428px) {
+ @media only screen and (max-width: 429px) {
  
  .banner_widget {
  background: white !important;
@@ -61,23 +61,23 @@ let mobileBanner = setInterval(() => {
   color: white;
 }
 }
-@media only screen and (min-width: 429px) {
-.banner_widget button {
-  margin: 12px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: darkred !important;
-  border-radius: 6px;
-  width: 100%;
-  height: 56px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  text-transform: uppercase;
-  color: #1e1b4d;
-}
-}
+/*@media only screen and (min-width: 429px) {*/
+/*.banner_widget button {*/
+/*  margin: 12px 0 0;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  background: darkred !important;*/
+/*  border-radius: 6px;*/
+/*  width: 100%;*/
+/*  height: 56px;*/
+/*  font-weight: 600;*/
+/*  font-size: 16px;*/
+/*  line-height: 19px;*/
+/*  text-transform: uppercase;*/
+/*  color: #1e1b4d;*/
+/*}*/
+/*}*/
 
   
           .css-15hxzhe{
