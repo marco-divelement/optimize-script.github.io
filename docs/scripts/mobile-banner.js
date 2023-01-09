@@ -45,6 +45,8 @@ let mobileBanner = setInterval(() => {
     background-image: unset !important;
     background-color: white !important;
     color: black !important;
+        border: 3px solid rgb(64,82,254) !important;
+    
 }
 
 .css-mljoh {
@@ -63,7 +65,7 @@ let mobileBanner = setInterval(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black !important;
+  background: rgb(245,105,95) !important;
   border-radius: 6px;
   width: 100%;
   height: 56px;
@@ -71,7 +73,7 @@ let mobileBanner = setInterval(() => {
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
-  color: white;
+  color: white !important;
 }
 }
 /*@media only screen and (min-width: 429px) {*/
@@ -256,7 +258,7 @@ form.css-8atqhb .chakra-form__error-message {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*background: bisque;*/
+  background: rgb(219,226,236);
   border-radius: 6px;
   width: 100%;
   height: 56px;
