@@ -401,10 +401,10 @@ form.css-8atqhb .chakra-form__error-message {
             </clipPath>
             </defs>
         </svg>
-        <input type="number" autocomplete="off" pattern="[0-9]*" name="zipCode"  placeholder="Your zip code" class="">
-        <span class="auto_region var_auto_loc"></span>
+<!--        <input type="number" autocomplete="off" pattern="[0-9]*" name="zipCode"  placeholder="Your zip code" class=""> -->
+<!--        <span class="auto_region var_auto_loc"></span>-->
     </label>
-    <span class="zip_error">Write your zip code</span>
+<!--    <span class="zip_error">Write your zip code</span> -->
     <small>Free and Simple - your information is secure </small>
     <button>Compare quote</button>
 </div>
@@ -770,7 +770,7 @@ form.css-8atqhb .chakra-form__error-message {
             if (typeof clarity === "function") {
                 clearInterval(record)
 
-                clarity("set", `sticky_autofilled_zip_variant_c${eventVar}`, "variant_1")
+                clarity("set", `mobile widget${eventVar}`, "variant_2")
             }
         }, 200)
     }
