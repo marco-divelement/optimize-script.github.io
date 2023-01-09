@@ -55,7 +55,7 @@ let mobileBanner = setInterval(() => {
 }
 
 .css-mljoh {
-    background-color: white !important;
+    background-color: transparent !important;
     color: black !important;
 }
 
@@ -351,6 +351,7 @@ form.css-8atqhb .chakra-form__error-message {
       </style>
       `
         let stickyBlock = /*html */ `
+
       <div></div>
       <section class="sticky_banner"> 
           <svg class="btn_close_sticky" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -383,8 +384,8 @@ form.css-8atqhb .chakra-form__error-message {
           <button>Compare quotes</button>
       </section>
       `
-
         let bannerBlock = /*html */ `
+
     <div></div>
 <div class="banner_widget">
 <!--    <p>Your Zip Code</p>-->
@@ -409,17 +410,10 @@ form.css-8atqhb .chakra-form__error-message {
 </div>
 `
 
-        let publishersInfo = /*html */ `
-    <div></div>
-<div class="publishers_info">
-    Hola mundo Publishers
-</div>
-`
 
-        function onShowPublishers () {
-            document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
-        }
-        onShowPublishers()
+
+
+
 
 
         document.body.insertAdjacentHTML("afterbegin", style)
@@ -550,6 +544,11 @@ form.css-8atqhb .chakra-form__error-message {
                 }
             }
         }
+
+        function onShowPublishers () {
+            document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
+        }
+        onShowPublishers()
 
         function onAutoFillLocation() {
             document.querySelector("form.css-8atqhb").insertAdjacentHTML("afterbegin", bannerBlock)
