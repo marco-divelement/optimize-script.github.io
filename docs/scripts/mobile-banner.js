@@ -38,6 +38,13 @@ let mobileBanner = setInterval(() => {
       
  /*Banner mobile style*/
  @media only screen and (max-width: 428px) {
+ 
+ .banner_widget {
+ background: white !important;
+ color: black !important;
+ 
+ }
+ 
  .banner_widget button {
   margin: 12px 0 0;
   display: flex;
@@ -51,7 +58,7 @@ let mobileBanner = setInterval(() => {
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
-  color: #1e1b4d;
+  color: white;
 }
 }
 @media only screen and (min-width: 429px) {
