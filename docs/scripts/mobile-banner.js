@@ -2,7 +2,7 @@ let mobileBanner = setInterval(() => {
     if (document.querySelector("#menu-list")) {
         clearInterval(mobileBanner)
 
-        console.log("Variant 2.1")
+        console.log("Variant 2.2")
 
         let eventVar = "desktop"
 
