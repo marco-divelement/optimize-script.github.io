@@ -2,7 +2,7 @@ let mobileBanner = setInterval(() => {
     if (document.querySelector("#menu-list")) {
         clearInterval(mobileBanner)
 
-        console.log("Variant 2.3")
+        console.log("Variant 2.4")
 
         let eventVar = "desktop"
 
@@ -335,7 +335,7 @@ form.css-8atqhb .chakra-form__error-message {
       </style>
       `
 
-        let stickyBlocks = /*html */ `
+        let stickyBlock = /*html */ `
       <div></div>
       <section class="sticky_banner"> 
           <svg class="btn_close_sticky" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
