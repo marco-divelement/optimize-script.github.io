@@ -62,6 +62,10 @@ let mobileBanner = setInterval(() => {
 .css-ptv46z{
 display: none !important;
 }
+ /*Publishers Info*/
+.css-1p8d0n6{
+ display: none !important;
+}
  
  .banner_widget {
  background: white !important;
