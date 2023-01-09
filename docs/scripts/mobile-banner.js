@@ -41,11 +41,11 @@ let mobileBanner = setInterval(() => {
  @media only screen and (max-width: 429px) {
  
  .css-1uguvmx {
-    border-radius: 5px; 
+    border-radius: 15px; 
     background-image: unset !important;
     background-color: white !important;
     color: black !important;
-        border: 3px solid rgb(64,82,254) !important;
+        border: 2px solid rgb(64,82,254) !important;
     
 }
 
@@ -370,7 +370,7 @@ form.css-8atqhb .chakra-form__error-message {
                   </defs>
               </svg>
               <input type="number" autocomplete="off" pattern="[0-9]*" name="zipCode"  placeholder="Your zip code" class="">
-              <span class="auto_region var_sticky"></span>
+<!--              <span class="auto_region var_sticky"></span> -->
           </label>
           <span class="zip_error">Write your zip code</span>
           <button>Compare quotes</button>
