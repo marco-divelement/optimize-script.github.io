@@ -3,7 +3,7 @@ let mobileBanner = setInterval(() => {
         clearInterval(mobileBanner)
 
         console.log("Variant 2")
-        console.log("Version 2.7")
+        console.log("Version 2.8")
 
         let eventVar = "desktop"
 
@@ -411,17 +411,12 @@ form.css-8atqhb .chakra-form__error-message {
 `
 
 
-
-
-
-
-
         document.body.insertAdjacentHTML("afterbegin", style)
 
         // onSticky()
 
         if (document.querySelector("form.css-8atqhb")) {
-           // onAutoFillLocation()
+            // onAutoFillLocation()
         }
 
         // fetchLocation()
@@ -545,10 +540,7 @@ form.css-8atqhb .chakra-form__error-message {
             }
         }
 
-        function onShowPublishers () {
-            document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
-        }
-        onShowPublishers()
+
 
         function onAutoFillLocation() {
             document.querySelector("form.css-8atqhb").insertAdjacentHTML("afterbegin", bannerBlock)
