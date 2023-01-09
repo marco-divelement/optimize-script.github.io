@@ -2,7 +2,7 @@ let mobileBanner = setInterval(() => {
     if (document.querySelector("#menu-list")) {
         clearInterval(mobileBanner)
 
-        console.log("Variant 2.2")
+        console.log("Variant 2.3")
 
         let eventVar = "desktop"
 
@@ -38,6 +38,13 @@ let mobileBanner = setInterval(() => {
       
  /*Banner mobile style*/
  @media only screen and (max-width: 429px) {
+ 
+ .css-1uguvmx {
+    /* border-radius: 5px; */
+    /* background-image: url(https://res.cloudinary.com/moneygeek/image/upload/v1579500551/bzr65ug0nqivduutyymz.svg); */
+    background-color: white !important;
+    color: black !important;
+}
  
  .banner_widget {
  background: white !important;
@@ -328,7 +335,7 @@ form.css-8atqhb .chakra-form__error-message {
       </style>
       `
 
-        let stickyBlock = /*html */ `
+        let stickyBlocks = /*html */ `
       <div></div>
       <section class="sticky_banner"> 
           <svg class="btn_close_sticky" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -362,7 +369,7 @@ form.css-8atqhb .chakra-form__error-message {
       </section>
       `
 
-        let bannerBlock = /*html */ `
+        let bannerBlocks = /*html */ `
     <div></div>
 <div class="banner_widget">
     <p>Code</p>
