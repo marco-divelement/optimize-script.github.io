@@ -3,7 +3,7 @@ let mobileBanner = setInterval(() => {
         clearInterval(mobileBanner)
 
         console.log("Variant 2")
-        console.log("Version 2.8")
+        console.log("Version 2.9")
 
         let eventVar = "desktop"
 
@@ -401,7 +401,7 @@ form.css-8atqhb .chakra-form__error-message {
             </clipPath>
             </defs>
         </svg>
-<!--        <input type="number" autocomplete="off" pattern="[0-9]*" name="zipCode"  placeholder="Your zip code" class=""> -->
+        <input type="number" autocomplete="off" pattern="[0-9]*" name="zipCode"  placeholder="Your zip code" class=""> 
 <!--        <span class="auto_region var_auto_loc"></span>-->
     </label>
 <!--    <span class="zip_error">Write your zip code</span> -->
