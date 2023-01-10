@@ -3,7 +3,7 @@ let mobileBanner = setInterval(() => {
         clearInterval(mobileBanner)
 
         console.log("Variant 2")
-        console.log("Version 2.7")
+        console.log("Version 2.8")
 
         let eventVar = "desktop"
 
