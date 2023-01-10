@@ -94,23 +94,12 @@ display: none !important;
   color: white !important;
 }
 }
-/*@media only screen and (min-width: 429px) {*/
-/*.banner_widget button {*/
-/*  margin: 12px 0 0;*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  background: darkred !important;*/
-/*  border-radius: 6px;*/
-/*  width: 100%;*/
-/*  height: 56px;*/
-/*  font-weight: 600;*/
-/*  font-size: 16px;*/
-/*  line-height: 19px;*/
-/*  text-transform: uppercase;*/
-/*  color: #1e1b4d;*/
-/*}*/
-/*}*/
+    .publisher_wrapper p{
+        font-size: smaller !important;
+        line-height: 0.5 !important;
+    }
+
+
 
   
           .css-15hxzhe{
@@ -423,11 +412,11 @@ form.css-8atqhb .chakra-form__error-message {
         let publishersInfo = /*html */ `
     <div></div>
 <div class="publisher_wrapper">
-    <p>Verified By: </p>
-    <p>Reviewed At: </p>
-    <p>Pubished At: </p>
-    <p>Verified By: </p>
-    <p>Editorial & Advertising Disclosures </p>
+    <p>By <a href="#">Mark Fitzpatrick</a>, <i>Insurance Analyst</i></p>
+    <p>Reviewed By <a href="#">Doug Milnes</a> </p>
+    <p>Fact checked by </p>
+    <p>Updated: <b>Dec. 05, 2022</b> </p>
+    <p><a href="#">Editorial & Advertising Disclosures</a></p>
 </div>
 `
 
@@ -451,12 +440,13 @@ form.css-8atqhb .chakra-form__error-message {
         if (window.innerWidth <= 469) {
             document.querySelector("div.css-1qsp2gq").insertAdjacentHTML("afterbegin", publishersInfo)
             console.log("Render Publishers")
+            document.querySelector("div.css-11h5ku").insertAdjacentHTML("afterbegin", breadCrumb)
+
         }
 
         // document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
 
         // BREADCRUMB
-        document.querySelector("div.css-11h5ku").insertAdjacentHTML("afterbegin", breadCrumb)
 
         function onSticky() {
             if (!sessionStorage.getItem("sticky_banner")) {
