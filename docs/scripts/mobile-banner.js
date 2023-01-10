@@ -3,7 +3,7 @@ let mobileBanner = setInterval(() => {
         clearInterval(mobileBanner)
 
         console.log("Variant 2")
-        console.log("Version 2.4")
+        console.log("Version 2.5")
 
         let eventVar = "desktop"
 
@@ -417,7 +417,7 @@ form.css-8atqhb .chakra-form__error-message {
 
         let publishersInfo = /*html */ `
     <div></div>
-<div class="banner_widget">
+<div class="publisher_wrapper">
     <p>Verified By: </p>
     <p>Reviewed At: </p>
     <p>Pubished At: </p>
@@ -438,9 +438,10 @@ form.css-8atqhb .chakra-form__error-message {
 
         if (window.innerWidth <= 469) {
             document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
+            console.log("Render Publishers")
         }
 
-        document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
+        // document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
 
         function onSticky() {
             if (!sessionStorage.getItem("sticky_banner")) {
