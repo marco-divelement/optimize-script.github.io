@@ -3,7 +3,7 @@ let mobileBanner = setInterval(() => {
         clearInterval(mobileBanner)
 
         console.log("Variant 2")
-        console.log("Version 2.3")
+        console.log("Version 2.4")
 
         let eventVar = "desktop"
 
@@ -43,17 +43,18 @@ let mobileBanner = setInterval(() => {
  .css-polczn{
     background-color: white !important;
     color: black !important;
- }
- 
+ } 
  .css-1uguvmx {
     border-radius: 15px; 
     background-image: unset !important;
     background-color: white !important;
     color: black !important;
         border: 3px solid rgb(64,82,254) !important;
-    
 }
 
+.css-x3wokz{
+display: none !important;
+}
 .css-mljoh {
     background-color: transparent !important;
     color: black !important;
@@ -418,6 +419,10 @@ form.css-8atqhb .chakra-form__error-message {
     <div></div>
 <div class="banner_widget">
     <p>Verified By: </p>
+    <p>Reviewed At: </p>
+    <p>Pubished At: </p>
+    <p>Verified By: </p>
+    <p>Editorial & Advertising Disclosures </p>
 </div>
 `
 
@@ -432,8 +437,10 @@ form.css-8atqhb .chakra-form__error-message {
         // fetchLocation()
 
         if (window.innerWidth <= 469) {
-            document.querySelector(".css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
+            document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
         }
+
+        document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
 
         function onSticky() {
             if (!sessionStorage.getItem("sticky_banner")) {
