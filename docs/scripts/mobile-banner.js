@@ -39,6 +39,11 @@ let mobileBanner = setInterval(() => {
       
  /*Banner mobile style*/
  @media only screen and (max-width: 429px) {
+ 
+ .publisher_wrapper{
+ color: black !important;
+ }
+ 
  /*Section*/
  .css-polczn{
     background-color: white !important;
