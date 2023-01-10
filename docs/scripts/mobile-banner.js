@@ -449,7 +449,7 @@ form.css-8atqhb .chakra-form__error-message {
         // fetchLocation()
 
         if (window.innerWidth <= 469) {
-            document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
+            document.querySelector("div.css-1qsp2gq").insertAdjacentHTML("afterbegin", publishersInfo)
             console.log("Render Publishers")
         }
 
