@@ -411,7 +411,7 @@ form.css-8atqhb .chakra-form__error-message {
     <div></div>
 <div class="publisher_wrapper">
     <p>By <a href="#">Mark Fitzpatrick</a>, <i>Insurance Analyst</i></p>
-    <p>Reviewed By <a href="#">Doug Milnes</a> </p>
+    <p>Reviewed By <a href="#">Mandy Harrelson</a> </p>
     <p>Fact checked by </p>
     <p>Updated: <b>Dec. 05, 2022</b> </p>
     <p><a href="#">Editorial & Advertising Disclosures</a></p>
