@@ -42,6 +42,8 @@ let mobileBanner = setInterval(() => {
  
  .publisher_wrapper{
  color: black !important;
+ display: block !important;
+ 
  }
  
  /*Section*/
@@ -92,8 +94,12 @@ display: none !important;
   line-height: 19px;
   text-transform: uppercase;
   color: white !important;
+ }
 }
-}
+
+    .publisher_wrapper {
+        display: none !important;
+    }
     .publisher_wrapper p{
         font-size: smaller !important;
         line-height: 0.5 !important;

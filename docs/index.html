@@ -10,7 +10,31 @@
 <body>
 Hello World
 
+<style>
+
+    .publisher_wrapper {
+        display: none !important;
+    }
+
+
+    @media only screen and (max-width: 429px) {
+
+        .publisher_wrapper {
+            display: block!important;
+            color: black !important;
+        }
+    }
+</style>
+
 <div id="menu-list"></div>
+
+<div class="publisher_wrapper">
+    <p>By <a href="#">Mark Fitzpatrick</a>, <i>Insurance Analyst</i></p>
+    <p>Reviewed By <a href="#">Doug Milnes</a> </p>
+    <p>Fact checked by </p>
+    <p>Updated: <b>Dec. 05, 2022</b> </p>
+    <p><a href="#">Editorial & Advertising Disclosures</a></p>
+</div>
 
 <script src="./scripts/mobile-banner.js"></script>
 </body>
