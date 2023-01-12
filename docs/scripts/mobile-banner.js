@@ -2,7 +2,9 @@ let stickyBanner = setInterval(() => {
     if (document.querySelector("#menu-list")) {
         clearInterval(stickyBanner)
 
-        console.log(">>>>>>>>>>>>>>>Variant C")
+        console.log("Variant 2")
+        console.log("Version 2.11")
+
 
         let eventVar = "desktop"
 
