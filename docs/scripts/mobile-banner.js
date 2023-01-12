@@ -1,15 +1,13 @@
-let mobileBanner = setInterval(() => {
+let stickyBanner = setInterval(() => {
     if (document.querySelector("#menu-list")) {
-        clearInterval(mobileBanner)
+        clearInterval(stickyBanner)
 
-        console.log("Variant 2")
-        console.log("Version 2.11")
+        console.log(">>>>>>>>>>>>>>>Variant C")
 
         let eventVar = "desktop"
 
         if (window.innerWidth <= 768) {
             eventVar = "mobile"
-            console.log("mobile view")
         }
 
         function pushDataLayer(actionDataLayer, labelDataLayer) {
@@ -18,8 +16,7 @@ let mobileBanner = setInterval(() => {
                 console.log(actionDataLayer + " : " + labelDataLayer)
                 dataLayer.push({
                     event: "event-to-ga",
-                    // eventCategory: `Exp: A/B Test for Mobile Design Update - Above the Fold ${eventVar}`,
-                    eventCategory: `Exp: A/B Test for Mobile Design Update - Above the Fold mobile`,
+                    eventCategory: `Exp: Sticky AutoFilled ZIP Variant C ${eventVar}`,
                     eventAction: `${actionDataLayer}`,
                     eventLabel: `${labelDataLayer}`,
                 })
@@ -27,7 +24,7 @@ let mobileBanner = setInterval(() => {
                 console.log(actionDataLayer)
                 dataLayer.push({
                     event: "event-to-ga",
-                    eventCategory: `Exp: A/B Test for Mobile Design Update - Above the Fold mobile`,
+                    eventCategory: `Exp: Sticky AutoFilled ZIP Variant C ${eventVar}`,
                     eventAction: `${actionDataLayer}`,
                 })
             }
@@ -35,71 +32,6 @@ let mobileBanner = setInterval(() => {
 
         let style = /*html */ `
       <style>
-      
-    @media only screen and (min-width: 429px) {
-        .publisher_wrapper {
-            display: none !important;
-        }
-    }
-      
- /*Banner mobile style*/
- @media only screen and (max-width: 429px) {
- 
- /*Section*/
- .css-polczn{
-    background-color: white !important;
-    color: black !important;
- } 
- .css-1uguvmx {
-    border-radius: 15px; 
-    background-image: unset !important;
-    background-color: white !important;
-    color: black !important;
-        border: 3px solid rgb(64,82,254) !important;
-}
-
-.css-x3wokz{
-display: none !important;
-}
-.css-mljoh {
-    background-color: transparent !important;
-    color: black !important;
-}
-
-.css-ptv46z{
-display: none !important;
-}
- /*Publishers Info*/
-.css-1p8d0n6{
- display: none !important;
-}
- 
- .banner_widget {
- background: white !important;
- color: black !important;
- }
- 
- .banner_widget button {
-  margin: 12px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgb(245,105,95) !important;
-  border-radius: 6px;
-  width: 100%;
-  height: 56px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  text-transform: uppercase;
-  color: white !important;
- }
-}
-    .publisher_wrapper p{
-        font-size: smaller !important;
-        line-height: 0.5 !important;
-    }
-
           .css-15hxzhe{
             z-index: 1;
           }
@@ -118,7 +50,7 @@ display: none !important;
               z-index: 55;
               margin: 0;
           }
-          .sticky_banner.is_fixed{            
+          .sticky_banner.is_fixed_var{            
               display: block;
               margin: -15px 0 25px;
               position: relative;
@@ -143,7 +75,7 @@ display: none !important;
               display: flex;
               align-items: center;
               justify-content: center;
-              background: blue;
+              background: #FFC65A;
               border-radius: 6px;
               width: 100%;
               height: 48px;
@@ -214,7 +146,7 @@ display: none !important;
           }
   
           @media (max-width: 1110px){
-              .sticky_banner.is_fixed{            
+              .sticky_banner.is_fixed_var{            
                   position: absolute;
                   display: block;
                   margin: 0;
@@ -250,7 +182,7 @@ form.css-8atqhb button.chakra-button,
 form.css-8atqhb .chakra-form__error-message {
   display: none !important;
 }
-.banner_widget p {
+.auto_location_block p {
   font-family: "Brandon Grotesque", sans-serif;
   font-weight: 600;
   font-size: 16px;
@@ -258,12 +190,12 @@ form.css-8atqhb .chakra-form__error-message {
   color: #ffffff;
   margin-bottom: 4px;
 }
-.banner_widget button {
+.auto_location_block button {
   margin: 12px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(219,226,236);
+  background: #ffc659;
   border-radius: 6px;
   width: 100%;
   height: 56px;
@@ -273,7 +205,7 @@ form.css-8atqhb .chakra-form__error-message {
   text-transform: uppercase;
   color: #1e1b4d;
 }
-.banner_widget label {
+.auto_location_block label {
   display: flex;
   justify-content: space-between;
   background: #ffffff;
@@ -282,12 +214,12 @@ form.css-8atqhb .chakra-form__error-message {
   align-items: center;
   padding: 7px 12px;
 }
-.banner_widget label svg {
+.auto_location_block label svg {
   width: 100%;
   max-width: 16px;
   margin-right: 12px;
 }
-.banner_widget input {
+.auto_location_block input {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -303,11 +235,11 @@ form.css-8atqhb .chakra-form__error-message {
   max-width: 126px;
   width: 100%;
 }
-.banner_widget input:focus,
-.banner_widget input:hover {
+.auto_location_block input:focus,
+.auto_location_block input:hover {
   border-color: #d3d4d6;
 }
-.banner_widget input::placeholder {
+.auto_location_block input::placeholder {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -336,12 +268,12 @@ form.css-8atqhb .chakra-form__error-message {
 .zip_error.is_error {
   display: block;
 }
-.banner_widget label.is_error {
+.auto_location_block label.is_error {
   border-color: #db3732;
 }
 
 @media (max-width: 1110px) {
-  .banner_widget label {
+  .auto_location_block label {
     padding: 8px 12px;
   }
 }
@@ -350,7 +282,7 @@ form.css-8atqhb .chakra-form__error-message {
 
         let stickyBlock = /*html */ `
       <div></div>
-      <section class="sticky_banner"> 
+      <section class="sticky_banner">
           <svg class="btn_close_sticky" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_82_1006)">
               <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#555555"/>
@@ -361,7 +293,7 @@ form.css-8atqhb .chakra-form__error-message {
               </clipPath>
               </defs>
           </svg>
-          <p>Compare rates and save on auto insurance today!!</p>
+          <p>Compare rates and save on auto insurance today!</p>
           <label>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_82_998)">
@@ -375,17 +307,17 @@ form.css-8atqhb .chakra-form__error-message {
                   </defs>
               </svg>
               <input type="number" autocomplete="off" pattern="[0-9]*" name="zipCode"  placeholder="Your zip code" class="">
-<!--              <span class="auto_region var_sticky"></span> -->
+              <span class="auto_region var_sticky"></span>
           </label>
           <span class="zip_error">Write your zip code</span>
           <button>Compare quotes</button>
       </section>
       `
 
-        let bannerBlock = /*html */ `
+        let autoLocationBlock = /*html */ `
     <div></div>
-<div class="banner_widget">
-<!--    <p>Your Zip Code</p>-->
+<div class="auto_location_block">
+    <p>Your Zip Code</p>
     <label>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_82_998)">
@@ -402,49 +334,19 @@ form.css-8atqhb .chakra-form__error-message {
         <span class="auto_region var_auto_loc"></span>
     </label>
     <span class="zip_error">Write your zip code</span>
-    <small>Free and Simple - your information is secure </small>
-    <button>Compare quote</button>
-</div>
-`
-
-        let publishersInfo = /*html */ `
-    <div></div>
-<div class="publisher_wrapper">
-    <p>By <a href="#">Mark Fitzpatrick</a>, <i>Insurance Analyst</i></p>
-    <p>Reviewed By <a href="#">Mandy Harrelson</a> </p>
-    <p>Fact checked by </p>
-    <p>Updated: <b>Dec. 05, 2022</b> </p>
-    <p><a href="#">Editorial & Advertising Disclosures</a></p>
-</div>
-`
-
-        let breadCrumb = /*html */ `
-    <div></div>
-<div class="bread_crumb">
-    <p>Insurance > Shop For Car Insurance </p>
+    <button>Compare quotes</button>
 </div>
 `
 
         document.body.insertAdjacentHTML("afterbegin", style)
 
-        // onSticky()
+        onSticky()
 
         if (document.querySelector("form.css-8atqhb")) {
             onAutoFillLocation()
         }
 
-        // fetchLocation()
-
-        if (window.innerWidth <= 469) {
-            document.querySelector("div.css-1qsp2gq").insertAdjacentHTML("afterbegin", publishersInfo)
-            console.log("Render Publishers")
-            document.querySelector("div.css-11h5ku").insertAdjacentHTML("afterbegin", breadCrumb)
-
-        }
-
-        // document.querySelector("div.css-1o4umte").insertAdjacentHTML("afterbegin", publishersInfo)
-
-        // BREADCRUMB
+        fetchLocation()
 
         function onSticky() {
             if (!sessionStorage.getItem("sticky_banner")) {
@@ -497,10 +399,14 @@ form.css-8atqhb .chakra-form__error-message {
                         (document.querySelector(".css-1ih2ha8")?.getBoundingClientRect().bottom <= positionVar &&
                             window.location.pathname !== "/insurance/auto/car-insurance-estimate-calculator/") ||
                         (window.location.pathname === "/insurance/auto/car-insurance-estimate-calculator/" &&
-                            document.querySelector(".css-1ngo9xx")?.getBoundingClientRect().bottom <= positionVar)
+                            document.querySelector(".css-1h9j791")?.getBoundingClientRect().bottom <= positionVar) ||
+                        (window.location.pathname !== "/insurance/auto/car-insurance-estimate-calculator/" &&
+                            document.querySelector(".css-polczn")?.getBoundingClientRect().bottom <= positionVar) ||
+                        (window.location.pathname !== "/insurance/auto/car-insurance-estimate-calculator/" &&
+                            document.querySelector(".css-1ohdh4c")?.getBoundingClientRect().bottom <= positionVar)
                     ) {
-                        if (!document.querySelector(".sticky_banner").classList.contains("is_fixed")) {
-                            document.querySelector(".sticky_banner").classList.add("is_fixed")
+                        if (!document.querySelector(".sticky_banner").classList.contains("is_fixed_var")) {
+                            document.querySelector(".sticky_banner").classList.add("is_fixed_var")
                             if (window.innerWidth > 1110) {
                                 document.querySelector("#social-section").style.display = "none"
                                 document.querySelector(".social").style.display = "none"
@@ -525,6 +431,140 @@ form.css-8atqhb .chakra-form__error-message {
                                             }
                                         }
                                         e.target.setAttribute("data-test", "1")
+                                    })
+                                }
+                                if (btnSend) {
+                                    btnSend.addEventListener("click", (e) => {
+                                        e.preventDefault()
+                                        if (!e.target.getAttribute("data-test")) {
+                                            if (!e.target.classList.contains("on_click")) {
+                                                pushDataLayer("Sticky Compare Quoutes clicked")
+                                            }
+
+                                            if (window.location.pathname === "/insurance/auto/how-much-car-insurance-do-you-need/") {
+                                                document.querySelector("form.css-1lpx304 button[type='submit']").click()
+                                            } else if (
+                                                window.location.pathname === "/insurance/auto/temporary-and-month-to-month-car-insurance/" ||
+                                                window.location.pathname === "/insurance/auto/non-owner-car-insurance-north-carolina/" ||
+                                                window.location.pathname === "/insurance/auto/high-risk-car-insurance/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-car-insurance-texas/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-full-coverage-car-insurance/" ||
+                                                window.location.pathname === "/insurance/auto/best-home-auto-bundle/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-car-insurance-california/" ||
+                                                window.location.pathname === "/insurance/auto/cheap-car-insurance-no-deposit/" ||
+                                                window.location.pathname === "/insurance/auto/cheap-sr22-car-insurance/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-after-tickets-accidents/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-new-drivers/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-liability-only-car-insurance/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-car-insurance-quotes-companies/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-after-a-dui/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheapest-car-insurance-for-students/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-under-25-year-old/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-car-insurance-florida/" ||
+                                                window.location.pathname === "/insurance/auto/compare-quotes/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-for-18-year-olds/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-car-insurance-pennsylvania/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-car-insurance-georgia/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-houston-tx/" ||
+                                                window.location.pathname === "/insurance/auto/chevrolet-corvette-insurance/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-for-19-year-olds/" ||
+                                                window.location.pathname === "/insurance/auto/how-to-get-car-insurance-with-bad-credit/" ||
+                                                window.location.pathname === "/insurance/auto/first-time-drivers-buyers-car-insurance/" ||
+                                                window.location.pathname === "/insurance/auto/best-car-insurance-guide/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-for-21-year-olds/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-car-insurance-ohio/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-miami-fl/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-atlanta-ga/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-tampa-fl/" ||
+                                                window.location.pathname === "/insurance/homeowners/best-condo-insurance/" ||
+                                                window.location.pathname === "/insurance/homeowners/best-cheap-homeowners-insurance-miami-fl/" ||
+                                                window.location.pathname === "/insurance/homeowners/what-is-dwelling-coverage/" ||
+                                                window.location.pathname === "/insurance/homeowners/high-risk/" ||
+                                                window.location.pathname === "/insurance/homeowners/best-cheap-homeowners-insurance-tampa-fl/" ||
+                                                window.location.pathname === "/insurance/homeowners/cost-cheap-homeowners-insurance-oklahoma/" ||
+                                                window.location.pathname === "/insurance/homeowners/cheap-homeowners-insurance/" ||
+                                                window.location.pathname === "/insurance/homeowners/best-homeowners-insurance/" ||
+                                                window.location.pathname === "/insurance/homeowners/best-cheap-homeowners-insurance-orlando-fl/" ||
+                                                window.location.pathname === "/insurance/homeowners/best-cheap-homeowners-insurance-pensacola/" ||
+                                                window.location.pathname === "/insurance/homeowners/getting-home-insurance-with-bad-credit/" ||
+                                                window.location.pathname === "/insurance/homeowners/best-cheap-homeowners-insurance-fort-myers/" ||
+                                                window.location.pathname === "/insurance/homeowners/best-homeowners-insurance-california/" ||
+                                                window.location.pathname === "/insurance/homeowners/best-homeowners-insurance-mississippi/" ||
+                                                window.location.pathname === "/insurance/homeowners/best-homeowners-insurance-new-jersey/" ||
+                                                window.location.pathname === "/insurance/homeowners/cost-cheap-homeowners-insurance-pennsylvania/" ||
+                                                window.location.pathname === "/insurance/homeowners/reviews/allstate/" ||
+                                                window.location.pathname === "/insurance/renters/cheap-renters-insurance-coverage/" ||
+                                                window.location.pathname === "/insurance/renters/best-cheap-renters-insurance-in-alabama/" ||
+                                                window.location.pathname === "/insurance/renters/pet-liability-renters-coverage/" ||
+                                                window.location.pathname === "/insurance/renters/best-cheap-renters-insurance-in-dallas-tx/" ||
+                                                window.location.pathname === "/insurance/renters/best-cheap-renters-insurance-in-seattle-wa/" ||
+                                                window.location.pathname === "/insurance/renters/mobile-home-renters-insurance/" ||
+                                                window.location.pathname === "/insurance/renters/best-cheap-renters-insurance-in-austin-tx/" ||
+                                                window.location.pathname === "/insurance/renters/average-cost-of-renters-insurance/" ||
+                                                window.location.pathname === "/insurance/renters/best-cheap-renters-insurance-in-michigan/" ||
+                                                window.location.pathname === "/insurance/renters/best-cheap-renters-insurance-in-colorado/" ||
+                                                window.location.pathname === "/insurance/renters/best-cheap-renters-insurance-in-san-diego-ca/" ||
+                                                window.location.pathname === "/insurance/renters/best-cheap-renters-insurance-in-philadelphia-pa/" ||
+                                                window.location.pathname === "/insurance/renters/best-cheap-renters-insurance-in-georgia/" ||
+                                                window.location.pathname === "/insurance/auto/best-car-insurance-florida/" ||
+                                                window.location.pathname === "/insurance/auto/non-owner-car-insurance/" ||
+                                                window.location.pathname === "/insurance/auto/non-owner-sr22-car-insurance/" ||
+                                                window.location.pathname === "/insurance/auto/honda-cr-v-insurance/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-los-angeles-ca/" ||
+                                                window.location.pathname === "/insurance/auto/how-to-get-car-insurance-for-low-income/" ||
+                                                window.location.pathname === "/insurance/auto/how-to-switch-car-insurance-companies/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-for-17-year-olds/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-car-insurance-new-jersey/" ||
+                                                window.location.pathname === "/insurance/auto/state-laws-minimum-requirements-florida/" ||
+                                                window.location.pathname === "/insurance/auto/best-cheap-car-insurance-for-16-year-olds/" ||
+                                                window.location.pathname === "/insurance/auto/cheapest-car-insurance-new-york/"
+                                            ) {
+                                                document.querySelector("form.css-8atqhb button[type='submit']").click()
+                                            } else if (window.location.pathname === "/insurance/auto/resources/protecting-against-fraud/") {
+                                                document.querySelector("form.css-6d9zwi button[type='submit']").click()
+                                            } else if (
+                                                window.location.pathname === "/insurance/auto/anonymous-car-insurance-quote-no-personal-information/" ||
+                                                window.location.pathname === "/insurance/auto/car-insurance-estimate-calculator/"
+                                            ) {
+                                                if (document.querySelector("form.css-nbmzhw button[type='submit']")) {
+                                                    document.querySelector("form.css-nbmzhw button[type='submit']").click()
+                                                } else {
+                                                    document.querySelector("form.css-pup90p button[type='submit']").click()
+                                                }
+                                            } else if (
+                                                window.location.pathname === "/insurance/homeowners/reviews/travelers/" ||
+                                                window.location.pathname === "/insurance/homeowners/reviews/progressive/"
+                                            ) {
+                                                document.querySelector("form.css-1azpkau button[type='submit']").click()
+                                            }
+
+                                            if (document.querySelector(".chakra-form__error-message.css-vamxt0") !== null) {
+                                                error.forEach((er) => {
+                                                    er.classList.add("is_error")
+                                                })
+                                                label.classList.add("is_error")
+                                                document.querySelector(".auto_location_block label")?.classList.add("is_error")
+                                                pushDataLayer("Sticky filed error shown")
+                                            } else {
+                                                error.forEach((er) => {
+                                                    er.classList.remove("is_error")
+                                                })
+                                                label.classList.remove("is_error")
+                                                document.querySelector(".auto_location_block label")?.classList.remove("is_error")
+                                                if (document.querySelector(".auto_region svg")) {
+                                                    document.querySelectorAll(".auto_region").forEach((e) => {
+                                                        e.innerHTML = ""
+                                                    })
+                                                }
+                                            }
+                                        }
+                                        e.target.setAttribute("data-test", "1")
+
+                                        setTimeout(() => {
+                                            if (e.target.getAttribute("data-test")) {
+                                                e.target.removeAttribute("data-test")
+                                            }
+                                        }, 500)
                                     })
                                 }
 
@@ -559,14 +599,14 @@ form.css-8atqhb .chakra-form__error-message {
                             document.querySelector("#social-section").style.display = "block"
                             document.querySelector(".social").style.display = "block"
                         }
-                        document.querySelector(".sticky_banner").classList.remove("is_fixed")
+                        document.querySelector(".sticky_banner").classList.remove("is_fixed_var")
                     }
                 }
             }
         }
 
         function onAutoFillLocation() {
-            document.querySelector("form.css-8atqhb").insertAdjacentHTML("afterbegin", bannerBlock)
+            document.querySelector("form.css-8atqhb").insertAdjacentHTML("afterbegin", autoLocationBlock)
 
             if (document.querySelector(".auto_region.var_auto_loc")) {
                 if (document.querySelector(".auto_region.var_auto_loc") !== "") {
@@ -577,7 +617,7 @@ form.css-8atqhb .chakra-form__error-message {
 
                     let observerNewHeader = new IntersectionObserver((entries) => {
                         if (!entries[0].isIntersecting) return
-                        pushDataLayer(` `)
+                        pushDataLayer(`State resolved from IP and shown`)
                         observerNewHeader.disconnect()
                     })
 
@@ -588,8 +628,8 @@ form.css-8atqhb .chakra-form__error-message {
             onClickControlVer()
 
             function onClickControlVer() {
-                if (document.querySelector(".banner_widget")) {
-                    let autoLocBox = document.querySelector(".banner_widget"),
+                if (document.querySelector(".auto_location_block")) {
+                    let autoLocBox = document.querySelector(".auto_location_block"),
                         label = autoLocBox.querySelector("label"),
                         input = autoLocBox.querySelector("input"),
                         btnSend = autoLocBox.querySelector("button"),
@@ -677,7 +717,7 @@ form.css-8atqhb .chakra-form__error-message {
                         if (document.querySelectorAll("[name='zip']")[0]) {
                             var nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set
                             nativeInputValueSetter.call(document.querySelectorAll("[name='zip']")[0], jsonResponse.postal)
-                            var ev2 = new Event("input", {bubbles: true})
+                            var ev2 = new Event("input", { bubbles: true })
                             document.querySelectorAll("[name='zip']")[0].dispatchEvent(ev2)
 
                             if (document.querySelector(".auto_region.var_auto_loc")) {
@@ -720,7 +760,7 @@ form.css-8atqhb .chakra-form__error-message {
                 })
                 label.classList.remove("is_error")
             }
-            let ev2 = new Event("input", {bubbles: true})
+            let ev2 = new Event("input", { bubbles: true })
             document.querySelectorAll('[name="zip"]')[0].dispatchEvent(ev2)
 
             document.querySelectorAll(".auto_region").forEach((i) => {

@@ -2,7 +2,8 @@ let mobileBanner = setInterval(() => {
     if (document.querySelector("#menu-list")) {
         clearInterval(mobileBanner)
 
-        console.log("Variant 2.1")
+        console.log("Variant 2")
+        console.log("Version 2.11")
 
         let eventVar = "desktop"
 
@@ -35,14 +36,47 @@ let mobileBanner = setInterval(() => {
         let style = /*html */ `
       <style>
       
+    @media only screen and (min-width: 429px) {
+        .publisher_wrapper {
+            display: none !important;
+        }
+    }
       
  /*Banner mobile style*/
  @media only screen and (max-width: 429px) {
  
+ /*Section*/
+ .css-polczn{
+    background-color: white !important;
+    color: black !important;
+ } 
+ .css-1uguvmx {
+    border-radius: 15px; 
+    background-image: unset !important;
+    background-color: white !important;
+    color: black !important;
+        border: 3px solid rgb(64,82,254) !important;
+}
+
+.css-x3wokz{
+display: none !important;
+}
+.css-mljoh {
+    background-color: transparent !important;
+    color: black !important;
+}
+
+.css-ptv46z{
+display: none !important;
+}
+ /*Publishers Info*/
+.css-1p8d0n6{
+ display: none !important;
+}
+ 
  .banner_widget {
  background: white !important;
  color: black !important;
- 
  }
  
  .banner_widget button {
@@ -50,7 +84,7 @@ let mobileBanner = setInterval(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black !important;
+  background: rgb(245,105,95) !important;
   border-radius: 6px;
   width: 100%;
   height: 56px;
@@ -58,28 +92,14 @@ let mobileBanner = setInterval(() => {
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
-  color: white;
+  color: white !important;
+ }
 }
-}
-/*@media only screen and (min-width: 429px) {*/
-/*.banner_widget button {*/
-/*  margin: 12px 0 0;*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  background: darkred !important;*/
-/*  border-radius: 6px;*/
-/*  width: 100%;*/
-/*  height: 56px;*/
-/*  font-weight: 600;*/
-/*  font-size: 16px;*/
-/*  line-height: 19px;*/
-/*  text-transform: uppercase;*/
-/*  color: #1e1b4d;*/
-/*}*/
-/*}*/
+    .publisher_wrapper p{
+        font-size: smaller !important;
+        line-height: 0.5 !important;
+    }
 
-  
           .css-15hxzhe{
             z-index: 1;
           }
@@ -243,7 +263,7 @@ form.css-8atqhb .chakra-form__error-message {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: bisque;
+  background: rgb(219,226,236);
   border-radius: 6px;
   width: 100%;
   height: 56px;
@@ -355,7 +375,7 @@ form.css-8atqhb .chakra-form__error-message {
                   </defs>
               </svg>
               <input type="number" autocomplete="off" pattern="[0-9]*" name="zipCode"  placeholder="Your zip code" class="">
-              <span class="auto_region var_sticky"></span>
+<!--              <span class="auto_region var_sticky"></span> -->
           </label>
           <span class="zip_error">Write your zip code</span>
           <button>Compare quotes</button>
@@ -365,7 +385,7 @@ form.css-8atqhb .chakra-form__error-message {
         let bannerBlock = /*html */ `
     <div></div>
 <div class="banner_widget">
-    <p>Your Zip Code</p>
+<!--    <p>Your Zip Code</p>-->
     <label>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_82_998)">
@@ -382,19 +402,45 @@ form.css-8atqhb .chakra-form__error-message {
         <span class="auto_region var_auto_loc"></span>
     </label>
     <span class="zip_error">Write your zip code</span>
+    <small>Free and Simple - your information is secure </small>
     <button>Compare quote</button>
+</div>
+`
+
+        let publishersInfo = /*html */ `
+    <div></div>
+<div class="publisher_wrapper">
+    <p>By <a href="#">Mark Fitzpatrick</a>, <i>Insurance Analyst</i></p>
+    <p>Reviewed By <a href="#">Mandy Harrelson</a> </p>
+    <p>Fact checked by </p>
+    <p>Updated: <b>Dec. 05, 2022</b> </p>
+    <p><a href="#">Editorial & Advertising Disclosures</a></p>
+</div>
+`
+
+        let breadCrumb = /*html */ `
+    <div></div>
+<div class="bread_crumb">
+    <p>Insurance > Shop For Car Insurance </p>
 </div>
 `
 
         document.body.insertAdjacentHTML("afterbegin", style)
 
-        // onSticky()
+        onSticky()
 
         if (document.querySelector("form.css-8atqhb")) {
             onAutoFillLocation()
         }
 
-        // fetchLocation()
+        fetchLocation()
+
+        if (window.innerWidth <= 469) {
+            document.querySelector("div.css-1qsp2gq").insertAdjacentHTML("afterbegin", publishersInfo)
+            console.log("Render Publishers")
+            document.querySelector("div.css-11h5ku").insertAdjacentHTML("afterbegin", breadCrumb)
+
+        }
 
         function onSticky() {
             if (!sessionStorage.getItem("sticky_banner")) {
@@ -743,7 +789,7 @@ form.css-8atqhb .chakra-form__error-message {
             if (typeof clarity === "function") {
                 clearInterval(record)
 
-                clarity("set", `sticky_autofilled_zip_variant_c${eventVar}`, "variant_1")
+                clarity("set", `sticky_autofilled_zip_variant_2${eventVar}`, "variant2")
             }
         }, 200)
     }
