@@ -15,9 +15,10 @@ let stickyBanner = setInterval(() => {
 
         function getPublisher() {
           let publisher = document.querySelector("div.css-e4d0bk")
-            publisher.textContent
+           let text = publisher.textContent
             console.log("Getting publisher")
             console.log(publisher)
+            console.log(text)
         }
 
         getPublisher()
