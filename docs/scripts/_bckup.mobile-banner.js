@@ -36,11 +36,11 @@ let mobileBanner = setInterval(() => {
         let style = /*html */ `
       <style>
       
-    @media only screen and (min-width: 429px) {
+@media only screen and (min-width: 429px) {
         .publisher_wrapper {
             display: none !important;
         }
-    }
+}
       
  /*Banner mobile style*/
  @media only screen and (max-width: 429px) {
@@ -95,6 +95,7 @@ display: none !important;
   color: white !important;
  }
 }
+
     .publisher_wrapper p{
         font-size: smaller !important;
         line-height: 0.5 !important;

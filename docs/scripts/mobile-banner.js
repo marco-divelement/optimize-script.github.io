@@ -3,7 +3,7 @@ let stickyBanner = setInterval(() => {
         clearInterval(stickyBanner)
 
         console.log("Variant 2")
-        console.log("Version 2.11")
+        console.log("Version 2.0")
 
 
         let eventVar = "desktop"
@@ -18,7 +18,7 @@ let stickyBanner = setInterval(() => {
                 console.log(actionDataLayer + " : " + labelDataLayer)
                 dataLayer.push({
                     event: "event-to-ga",
-                    eventCategory: `Exp: Sticky AutoFilled ZIP Variant C ${eventVar}`,
+                    eventCategory: `Exp: A/B Test for Mobile Design Update - Above the Fold mobile`,
                     eventAction: `${actionDataLayer}`,
                     eventLabel: `${labelDataLayer}`,
                 })
@@ -26,7 +26,7 @@ let stickyBanner = setInterval(() => {
                 console.log(actionDataLayer)
                 dataLayer.push({
                     event: "event-to-ga",
-                    eventCategory: `Exp: Sticky AutoFilled ZIP Variant C ${eventVar}`,
+                    eventCategory: `Exp: A/B Test for Mobile Design Update - Above the Fold mobile`,
                     eventAction: `${actionDataLayer}`,
                 })
             }
@@ -279,6 +279,132 @@ form.css-8atqhb .chakra-form__error-message {
     padding: 8px 12px;
   }
 }
+
+
+@media only screen and (min-width: 429px) {
+        .publisher_wrapper {
+            display: none !important;
+        }
+}
+      
+ /*Banner mobile style*/
+ @media only screen and (max-width: 429px) {
+ 
+ /*Section*/
+ .css-polczn{
+    background-color: white !important;
+    color: black !important;
+ } 
+ .css-1uguvmx {
+    border-radius: 15px; 
+    background-image: unset !important;
+    background-color: white !important;
+    color: black !important;
+        border: 3px solid rgb(64,82,254) !important;
+}
+
+.css-x3wokz{
+display: none !important;
+}
+.css-mljoh {
+    background-color: transparent !important;
+    color: black !important;
+}
+
+.css-ptv46z{
+display: none !important;
+}
+ /*Publishers Info*/
+.css-1p8d0n6{
+ display: none !important;
+}
+ 
+ .banner_widget {
+ background: white !important;
+ color: black !important;
+ }
+ 
+ .banner_widget button {
+  margin: 12px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(245,105,95) !important;
+  border-radius: 6px;
+  width: 100%;
+  height: 56px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: white !important;
+  }
+}
+
+.publisher_wrapper p{
+        font-size: smaller !important;
+        line-height: 0.5 !important;
+}
+
+@media only screen and (min-width: 429px) {
+        .publisher_wrapper {
+            display: none !important;
+        }
+}
+      
+ /*Banner mobile style*/
+ @media only screen and (max-width: 429px) {
+ 
+ /*Section*/
+ .css-polczn{
+    background-color: white !important;
+    color: black !important;
+ } 
+ .css-1uguvmx {
+    border-radius: 15px; 
+    background-image: unset !important;
+    background-color: white !important;
+    color: black !important;
+        border: 3px solid rgb(64,82,254) !important;
+}
+
+.css-x3wokz{
+display: none !important;
+}
+.css-mljoh {
+    background-color: transparent !important;
+    color: black !important;
+}
+
+.css-ptv46z{
+display: none !important;
+}
+ /*Publishers Info*/
+.css-1p8d0n6{
+ display: none !important;
+}
+ 
+ .banner_widget {
+ background: white !important;
+ color: black !important;
+ }
+ 
+ .banner_widget button {
+  margin: 12px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(245,105,95) !important;
+  border-radius: 6px;
+  width: 100%;
+  height: 56px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: white !important;
+ }
+}
       </style>
       `
 
@@ -312,9 +438,21 @@ form.css-8atqhb .chakra-form__error-message {
               <span class="auto_region var_sticky"></span>
           </label>
           <span class="zip_error">Write your zip code</span>
+           <small>Free and Simple - your information is secure </small>
           <button>Compare quotes</button>
       </section>
       `
+
+        let publishersInfo = /*html */ `
+             <div></div>
+            <div class="publisher_wrapper">
+                <p>By <a href="#">Mark Fitzpatrick</a>, <i>Insurance Analyst</i></p>
+                <p>Reviewed By <a href="#">Mandy Harrelson</a> </p>
+                <p>Fact checked by </p>
+                <p>Updated: <b>Dec. 05, 2022</b> </p>
+                <p><a href="#">Editorial & Advertising Disclosures</a></p>
+            </div>`
+
 
         let autoLocationBlock = /*html */ `
     <div></div>
@@ -349,6 +487,11 @@ form.css-8atqhb .chakra-form__error-message {
         }
 
         fetchLocation()
+
+        if (window.innerWidth <= 469) {
+            document.querySelector("div.css-1qsp2gq").insertAdjacentHTML("afterbegin", publishersInfo)
+            console.log("Render Publishers")
+        }
 
         function onSticky() {
             if (!sessionStorage.getItem("sticky_banner")) {
@@ -835,7 +978,7 @@ form.css-8atqhb .chakra-form__error-message {
             if (typeof clarity === "function") {
                 clearInterval(record)
 
-                clarity("set", `sticky_autofilled_zip_variant_c${eventVar}`, "variant_1")
+                clarity("set", `sticky_autofilled_zip_variant_2${eventVar}`, "variant2")
             }
         }, 200)
     }
