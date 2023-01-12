@@ -3,7 +3,7 @@ let stickyBanner = setInterval(() => {
         clearInterval(stickyBanner)
 
         console.log("Variant 2")
-        console.log("Version 2.0")
+        console.log("Version 2.1")
 
 
         let eventVar = "desktop"
@@ -11,6 +11,16 @@ let stickyBanner = setInterval(() => {
         if (window.innerWidth <= 768) {
             eventVar = "mobile"
         }
+
+
+        function getPublisher() {
+          let publisher = document.querySelector("div.css-e4d0bk")
+            publisher.textContent
+            console.log("Getting publisher")
+            console.log(publisher)
+        }
+
+        getPublisher()
 
         function pushDataLayer(actionDataLayer, labelDataLayer) {
             window.dataLayer = window.dataLayer || []
@@ -490,6 +500,7 @@ display: none !important;
 
         if (window.innerWidth <= 469) {
             document.querySelector("div.css-1qsp2gq").insertAdjacentHTML("afterbegin", publishersInfo)
+            document.querySelector("div.css-11h5ku").insertAdjacentHTML("afterbegin", publishersInfo)
             console.log("Render Publishers")
         }
 
